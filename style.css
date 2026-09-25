@@ -56,15 +56,13 @@ header.top {
   color: var(--text);
 }
 
+/* Icon Play Store vuông tràn viền; bo góc 22% giống cách Play Store hiển thị. */
 .brand-mark {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  background: var(--primary);
-  display: grid;
-  place-items: center;
-  color: #fff;
-  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  border-radius: 22%;
+  flex-shrink: 0;
+  display: block;
 }
 
 .lang {
