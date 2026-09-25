@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Automated Operation</title>
+  <meta name="description" content="Privacy Policy of the Automated Operation Android app: what the Accessibility service reads, what stays on your device and what is never collected.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="alternate" hreflang="vi" href="../vi/privacy/">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../"><span class="brand-mark">▶</span>Automated Operation</a>
+    <a class="lang" href="../vi/privacy/">Tiếng Việt</a>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="muted">Effective date: September 25, 2026</p>
+
+  <p>This policy explains how the Android app <strong>Automated Operation</strong> (package
+    <code>com.autogest.anan</code>, also shown as “Thao Tác Tự Động” in Vietnamese) handles your
+    information. The app is developed and published by <strong>Nguyễn Đỗ Thanh</strong>
+    (“we”, “us”). Contact: <a href="mailto:dothanh1807@gmail.com">dothanh1807@gmail.com</a>.</p>
+
+  <div class="callout">
+    <strong>The short version</strong>
+    <ul>
+      <li>The app works fully offline. It does not request the Internet permission, so it cannot send
+        anything to us or to anyone else.</li>
+      <li>We have no servers, no accounts, no advertising and no analytics SDKs.</li>
+      <li>The Accessibility service only reads the screen and acts while a script <em>you</em> started is
+        running. Screen content is processed on your device and is not stored or shared.</li>
+      <li>Everything you create (scripts, images, schedules, run history) is kept in the app’s private
+        storage on your phone and is removed when you uninstall the app.</li>
+    </ul>
+  </div>
+
+  <h2>1. Accessibility service (AccessibilityService API)</h2>
+  <p>Automated Operation lets you build or record automation scripts: sequences of taps, swipes,
+    text input and other actions that the app replays for you. To do this it uses Android’s
+    Accessibility service. You must turn the service on yourself in the system Settings, after reading
+    an in-app disclosure that explains what it does. When it is on, the app:</p>
+  <ul>
+    <li><strong>Reads the content shown on screen</strong> — text, content descriptions and positions of
+      elements in the app in front of you — to find where a step should tap, or to check a “text”
+      condition in your script.</li>
+    <li><strong>Takes screenshots</strong> (Android 11 and newer) only when your script contains an
+      image tap, image wait or color check step, to compare the screen with the image or color you
+      chose. Screenshots are held in memory only for the comparison and discarded immediately; they
+      are never saved to storage.</li>
+    <li><strong>Performs actions on your behalf</strong> — tap, long press, swipe, scroll, type text,
+      press Back, Home, Recent apps and open the apps you picked — exactly as your script’s steps
+      say.</li>
+    <li><strong>Records your gestures</strong> when you use the recorder, so they can become script
+      steps. Nothing is added to a script until you review and accept it.</li>
+  </ul>
+  <p>The service does not read the screen, take screenshots or act when no script is running and you
+    are not recording. We do not use the Accessibility service to collect personal or sensitive data,
+    to read passwords, to change your settings behind your back, or for advertising. You can turn it
+    off at any time in <em>Settings &gt; Accessibility</em>.</p>
+
+  <h2>2. Information stored on your device</h2>
+  <p>The following is saved only in the app’s private storage on your phone. We never receive a copy.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Data</th><th>What it contains</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Scripts</td>
+        <td>Script names, steps, screen coordinates, text you want typed, and — when you record or enable
+          “prefer element matching” — the text or content description of the element you tapped</td>
+        <td>To replay your automation, and to find the same element again even if the layout moves</td></tr>
+      <tr><td>Template images</td>
+        <td>A downscaled copy of images you pick with the system photo picker for image steps</td>
+        <td>To find that image on screen</td></tr>
+      <tr><td>Colors</td>
+        <td>The color of the single pixel you pick for a color check step</td>
+        <td>To wait for that color</td></tr>
+      <tr><td>Run history</td>
+        <td>The last 200 runs: script name, start and end time, how the run ended</td>
+        <td>So you can see what ran and whether it succeeded</td></tr>
+      <tr><td>Schedules</td>
+        <td>Script, time of day and days of the week you chose</td>
+        <td>To start scripts at the time you set</td></tr>
+      <tr><td>Settings and consent</td>
+        <td>Your preferences, and the version and time you agreed to the Accessibility disclosure</td>
+        <td>To remember your choices and show the disclosure again if it changes</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>3. Permissions and how they are used</h2>
+  <div class="card">
+    <div class="row"><strong>Accessibility service</strong>
+      <span>Described in section 1.</span></div>
+    <div class="row"><strong>Display over other apps</strong>
+      <span>Shows the floating control bubble, the run progress banner and the recorder / coordinate
+        picker overlays on top of other apps.</span></div>
+    <div class="row"><strong>Notifications</strong>
+      <span>Shows a notification with Pause and Stop buttons while a script runs, and a “missed
+        schedule” notice when a scheduled run could not start.</span></div>
+    <div class="row"><strong>Alarms &amp; reminders (exact alarms)</strong>
+      <span>Starts scheduled scripts on time. Without it the app uses a less precise alarm.</span></div>
+    <div class="row"><strong>Run at startup</strong>
+      <span>Re-arms your schedules after the phone restarts, the app is updated or the time zone
+        changes.</span></div>
+    <div class="row"><strong>List of launchable apps</strong>
+      <span>Shows the apps installed on your phone that have a launcher icon so you can pick one for an
+        “Open app” step or as the recording target. This list is not stored or sent anywhere.</span></div>
+    <div class="row"><strong>Storage (Android 9 and older only)</strong>
+      <span>Saves an exported script file to the Downloads folder when you ask for it. Newer Android
+        versions need no storage permission for this.</span></div>
+  </div>
+  <p>For scheduled runs the app may turn the screen on and dismiss a lock screen that has no security
+    (swipe). It never bypasses a PIN, pattern, password or biometric lock; in that case the run is
+    skipped and you get a notification instead.</p>
+
+  <h2>4. What we do not collect</h2>
+  <p>The app does not collect, transmit, sell or share any personal data. It has no Internet
+    permission, no user accounts, no advertising, no analytics or crash-reporting SDKs, and does not
+    access your location, contacts, camera, microphone, SMS or call log.</p>
+
+  <h2>5. Sharing a script</h2>
+  <p>A script leaves your phone only when you choose to export or share it. The exported
+    <code>.autoscript</code> file contains the script’s steps and any template images it uses. You pick
+    where it goes (Downloads folder, a messaging app, email…), and that destination’s own privacy
+    policy applies. Importing a file someone sent you only reads that file.</p>
+
+  <h2>6. Google Play</h2>
+  <p>The app is distributed through Google Play. Depending on your device settings, Google may collect
+    crash and performance reports (Android vitals) and share aggregated statistics with us through the
+    Play Console. If in-app purchases are added in the future, payments will be handled entirely by
+    Google Play Billing; we will never see your payment details. This processing is covered by
+    <a href="https://policies.google.com/privacy" rel="noopener">Google’s Privacy Policy</a>.</p>
+
+  <h2>7. Retention and deletion</h2>
+  <p>Data stays on your phone until you delete it. You can delete scripts, schedules and history inside
+    the app, clear everything with <em>Settings &gt; Apps &gt; Automated Operation &gt; Storage &gt;
+    Clear data</em>, or uninstall the app. Because we hold no copy of your data, there is nothing for us
+    to delete on our side.</p>
+
+  <h2>8. Security</h2>
+  <p>Your data is kept in the app’s private storage, which Android isolates from other apps. The app
+    has no network access, so it cannot leak your data over the Internet.</p>
+
+  <h2>9. Children</h2>
+  <p>The app is not directed at children under 13 and does not knowingly collect information from
+    anyone, including children.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>We may update this policy when the app changes. The effective date above will change with each
+    update. If the Accessibility service starts reading new kinds of data, the app will show the
+    disclosure again and ask for your consent before continuing.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions or requests about this policy:
+    <a href="mailto:dothanh1807@gmail.com">dothanh1807@gmail.com</a></p>
+
+  <footer>© 2026 Nguyễn Đỗ Thanh · <a href="../">Automated Operation</a> ·
+    <a href="../vi/privacy/">Tiếng Việt</a></footer>
+</div>
+</body>
+</html>

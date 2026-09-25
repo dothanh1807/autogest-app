@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chính sách quyền riêng tư – Thao Tác Tự Động</title>
+  <meta name="description" content="Chính sách quyền riêng tư của ứng dụng Android Thao Tác Tự Động: dịch vụ Trợ năng đọc gì, dữ liệu nào nằm lại trên máy và điều gì không bao giờ bị thu thập.">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="alternate" hreflang="en" href="../../privacy/">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="../"><span class="brand-mark">▶</span>Thao Tác Tự Động</a>
+    <a class="lang" href="../../privacy/">English</a>
+  </header>
+
+  <h1>Chính sách quyền riêng tư</h1>
+  <p class="muted">Có hiệu lực từ ngày 25/09/2026</p>
+
+  <p>Chính sách này giải thích cách ứng dụng Android <strong>Thao Tác Tự Động</strong> (tên tiếng Anh
+    “Automated Operation”, mã gói <code>com.autogest.anan</code>) xử lý thông tin của bạn. Ứng dụng do
+    <strong>Nguyễn Đỗ Thanh</strong> (“chúng tôi”) phát triển và phát hành. Liên hệ:
+    <a href="mailto:dothanh1807@gmail.com">dothanh1807@gmail.com</a>.</p>
+
+  <div class="callout">
+    <strong>Tóm tắt</strong>
+    <ul>
+      <li>Ứng dụng chạy hoàn toàn offline. Ứng dụng không xin quyền Internet nên không thể gửi bất cứ thứ
+        gì cho chúng tôi hay cho ai khác.</li>
+      <li>Chúng tôi không có máy chủ, không có tài khoản, không quảng cáo, không dùng SDK phân tích.</li>
+      <li>Dịch vụ Trợ năng chỉ đọc màn hình và thao tác khi một tập lệnh do <em>chính bạn</em> bật đang
+        chạy. Nội dung màn hình được xử lý ngay trên máy, không được lưu lại và không được chia sẻ.</li>
+      <li>Mọi thứ bạn tạo (tập lệnh, ảnh mẫu, lịch chạy, lịch sử chạy) nằm trong bộ nhớ riêng của ứng
+        dụng trên điện thoại và bị xoá khi bạn gỡ ứng dụng.</li>
+    </ul>
+  </div>
+
+  <h2>1. Dịch vụ Trợ năng (AccessibilityService API)</h2>
+  <p>Thao Tác Tự Động cho phép bạn dựng hoặc ghi lại các tập lệnh tự động: chuỗi thao tác chạm, vuốt,
+    nhập chữ… mà ứng dụng sẽ thực hiện lại thay bạn. Để làm việc này, ứng dụng dùng dịch vụ Trợ năng
+    của Android. Bạn phải tự bật dịch vụ trong Cài đặt của hệ thống, sau khi đọc bản công bố trong ứng
+    dụng giải thích dịch vụ làm gì. Khi được bật, ứng dụng sẽ:</p>
+  <ul>
+    <li><strong>Đọc nội dung hiển thị trên màn hình</strong> — chữ, mô tả nội dung và vị trí các phần tử
+      của ứng dụng đang mở — để tìm đúng chỗ cần chạm, hoặc để kiểm tra điều kiện “chữ” trong tập lệnh.</li>
+    <li><strong>Chụp màn hình</strong> (Android 11 trở lên) chỉ khi tập lệnh có bước chạm theo ảnh, chờ
+      ảnh hoặc kiểm tra màu, để so màn hình với ảnh hay màu bạn đã chọn. Ảnh chụp chỉ nằm trong bộ nhớ
+      tạm trong lúc so khớp rồi bị bỏ ngay, không bao giờ được ghi xuống bộ nhớ máy.</li>
+    <li><strong>Thao tác thay bạn</strong> — chạm, nhấn giữ, vuốt, cuộn, nhập chữ, bấm Quay lại, Màn
+      hình chính, Ứng dụng gần đây và mở ứng dụng bạn chọn — đúng như các bước trong tập lệnh.</li>
+    <li><strong>Ghi lại cử chỉ của bạn</strong> khi bạn dùng tính năng ghi thao tác, để biến chúng thành
+      các bước. Không bước nào được thêm vào tập lệnh cho tới khi bạn xem lại và chấp nhận.</li>
+  </ul>
+  <p>Dịch vụ không đọc màn hình, không chụp màn hình và không thao tác khi không có tập lệnh nào đang
+    chạy và bạn không ghi thao tác. Chúng tôi không dùng dịch vụ Trợ năng để thu thập dữ liệu cá nhân hay
+    nhạy cảm, để đọc mật khẩu, để tự ý đổi cài đặt của bạn, hay cho mục đích quảng cáo. Bạn có thể tắt
+    dịch vụ bất cứ lúc nào trong <em>Cài đặt &gt; Hỗ trợ tiếp cận (Trợ năng)</em>.</p>
+
+  <h2>2. Thông tin lưu trên máy của bạn</h2>
+  <p>Những dữ liệu dưới đây chỉ nằm trong bộ nhớ riêng của ứng dụng trên điện thoại. Chúng tôi không
+    bao giờ nhận được bản sao nào.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Dữ liệu</th><th>Gồm những gì</th><th>Để làm gì</th></tr></thead>
+    <tbody>
+      <tr><td>Tập lệnh</td>
+        <td>Tên tập lệnh, các bước, toạ độ trên màn hình, nội dung bạn muốn nhập, và — khi bạn ghi thao tác
+          hoặc bật “ưu tiên nhận diện theo element” — chữ hoặc mô tả của phần tử bạn đã chạm</td>
+        <td>Để chạy lại tập lệnh, và tìm lại đúng phần tử đó kể cả khi bố cục xê dịch</td></tr>
+      <tr><td>Ảnh mẫu</td>
+        <td>Bản thu nhỏ của ảnh bạn chọn bằng trình chọn ảnh của hệ thống cho các bước theo ảnh</td>
+        <td>Để tìm ảnh đó trên màn hình</td></tr>
+      <tr><td>Màu</td>
+        <td>Màu của đúng một điểm ảnh bạn chọn cho bước kiểm tra màu</td>
+        <td>Để chờ màu đó xuất hiện</td></tr>
+      <tr><td>Lịch sử chạy</td>
+        <td>200 lần chạy gần nhất: tên tập lệnh, giờ bắt đầu và kết thúc, cách lần chạy kết thúc</td>
+        <td>Để bạn xem những gì đã chạy và có thành công không</td></tr>
+      <tr><td>Lịch chạy</td>
+        <td>Tập lệnh, giờ trong ngày và các ngày trong tuần bạn chọn</td>
+        <td>Để bắt đầu tập lệnh đúng giờ bạn đặt</td></tr>
+      <tr><td>Cài đặt và sự đồng ý</td>
+        <td>Các tuỳ chọn của bạn, cùng phiên bản và thời điểm bạn đồng ý bản công bố Trợ năng</td>
+        <td>Để nhớ lựa chọn của bạn và hỏi lại nếu bản công bố thay đổi</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>3. Các quyền và mục đích sử dụng</h2>
+  <div class="card">
+    <div class="row"><strong>Dịch vụ Trợ năng</strong>
+      <span>Xem mục 1.</span></div>
+    <div class="row"><strong>Hiển thị trên các ứng dụng khác</strong>
+      <span>Hiện bong bóng điều khiển nổi, banner tiến độ khi chạy, lớp phủ ghi thao tác và chọn toạ độ
+        đè lên ứng dụng khác.</span></div>
+    <div class="row"><strong>Thông báo</strong>
+      <span>Hiện thông báo có nút Tạm dừng và Dừng khi tập lệnh đang chạy, và báo “lỡ lịch” khi một lần
+        chạy theo lịch không bắt đầu được.</span></div>
+    <div class="row"><strong>Báo thức và lời nhắc (báo thức chính xác)</strong>
+      <span>Bắt đầu tập lệnh đã hẹn giờ cho đúng giờ. Không có quyền này thì ứng dụng dùng báo thức kém
+        chính xác hơn.</span></div>
+    <div class="row"><strong>Chạy khi khởi động</strong>
+      <span>Đặt lại lịch chạy sau khi máy khởi động lại, ứng dụng được cập nhật hoặc đổi múi giờ.</span></div>
+    <div class="row"><strong>Danh sách ứng dụng mở được</strong>
+      <span>Hiện các ứng dụng có biểu tượng trên máy để bạn chọn cho bước “Mở ứng dụng” hoặc làm ứng dụng
+        đích khi ghi thao tác. Danh sách này không được lưu và không được gửi đi đâu.</span></div>
+    <div class="row"><strong>Bộ nhớ (chỉ Android 9 trở xuống)</strong>
+      <span>Lưu tệp tập lệnh xuất ra vào thư mục Download khi bạn yêu cầu. Android mới hơn không cần quyền
+        bộ nhớ cho việc này.</span></div>
+  </div>
+  <p>Khi chạy theo lịch, ứng dụng có thể bật màn hình và gạt màn khoá không bảo mật (khoá vuốt). Ứng
+    dụng không bao giờ vượt qua mã PIN, hình vẽ, mật khẩu hay khoá sinh trắc học; khi đó lần chạy bị bỏ
+    qua và bạn nhận được thông báo.</p>
+
+  <h2>4. Những gì chúng tôi không thu thập</h2>
+  <p>Ứng dụng không thu thập, không truyền đi, không bán và không chia sẻ bất kỳ dữ liệu cá nhân nào.
+    Ứng dụng không có quyền Internet, không có tài khoản, không quảng cáo, không có SDK phân tích hay báo
+    lỗi, và không truy cập vị trí, danh bạ, camera, micro, tin nhắn hay nhật ký cuộc gọi.</p>
+
+  <h2>5. Chia sẻ tập lệnh</h2>
+  <p>Tập lệnh chỉ rời khỏi điện thoại khi bạn chủ động xuất hoặc chia sẻ. Tệp <code>.autoscript</code>
+    xuất ra chứa các bước của tập lệnh và những ảnh mẫu nó dùng. Bạn là người chọn nơi nhận (thư mục
+    Download, ứng dụng nhắn tin, email…), và chính sách quyền riêng tư của nơi đó sẽ được áp dụng. Nhập
+    một tệp người khác gửi cho bạn thì ứng dụng chỉ đọc tệp đó.</p>
+
+  <h2>6. Google Play</h2>
+  <p>Ứng dụng được phân phối qua Google Play. Tuỳ cài đặt trên máy, Google có thể thu thập báo cáo sự
+    cố và hiệu năng (Android vitals) rồi cung cấp số liệu tổng hợp cho chúng tôi qua Play Console. Nếu
+    sau này có mua hàng trong ứng dụng, việc thanh toán do Google Play Billing xử lý hoàn toàn; chúng tôi
+    không bao giờ thấy thông tin thanh toán của bạn. Việc xử lý này tuân theo
+    <a href="https://policies.google.com/privacy?hl=vi" rel="noopener">Chính sách quyền riêng tư của Google</a>.</p>
+
+  <h2>7. Lưu giữ và xoá dữ liệu</h2>
+  <p>Dữ liệu ở trên máy cho tới khi bạn xoá. Bạn có thể xoá tập lệnh, lịch chạy và lịch sử ngay trong
+    ứng dụng, xoá toàn bộ bằng <em>Cài đặt &gt; Ứng dụng &gt; Thao Tác Tự Động &gt; Bộ nhớ &gt; Xoá dữ
+    liệu</em>, hoặc gỡ ứng dụng. Vì chúng tôi không giữ bản sao nào nên phía chúng tôi không có gì cần
+    xoá.</p>
+
+  <h2>8. Bảo mật</h2>
+  <p>Dữ liệu nằm trong bộ nhớ riêng của ứng dụng, được Android cách ly khỏi các ứng dụng khác. Ứng dụng
+    không có quyền truy cập mạng nên không thể làm lộ dữ liệu của bạn qua Internet.</p>
+
+  <h2>9. Trẻ em</h2>
+  <p>Ứng dụng không hướng tới trẻ em dưới 13 tuổi và không cố ý thu thập thông tin của bất kỳ ai, kể cả
+    trẻ em.</p>
+
+  <h2>10. Thay đổi chính sách</h2>
+  <p>Chúng tôi có thể cập nhật chính sách này khi ứng dụng thay đổi; ngày hiệu lực ở đầu trang sẽ đổi
+    theo. Nếu dịch vụ Trợ năng bắt đầu đọc thêm loại dữ liệu mới, ứng dụng sẽ hiện lại bản công bố và hỏi
+    lại sự đồng ý của bạn trước khi tiếp tục.</p>
+
+  <h2>11. Liên hệ</h2>
+  <p>Câu hỏi hoặc yêu cầu về chính sách này:
+    <a href="mailto:dothanh1807@gmail.com">dothanh1807@gmail.com</a></p>
+
+  <footer>© 2026 Nguyễn Đỗ Thanh · <a href="../">Thao Tác Tự Động</a> ·
+    <a href="../../privacy/">English</a></footer>
+</div>
+</body>
+</html>
